@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [TrainController::class, 'index']);
+Route::get('/', function () {
+    return view('homepage');
+});
+
+Route::get('/trains', [TrainController::class, 'index']);
